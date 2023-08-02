@@ -20,6 +20,7 @@ const Home = () => {
         ) : (
           <Layout>
             {/* all infos */}
+            <h1 className='h-screen flex items-center justify-center'>Daddy's back!</h1>
           </Layout>
         )}
     </>
