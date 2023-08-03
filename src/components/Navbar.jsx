@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { CiSearch } from 'react-icons/ci';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import ecoLogo from '../assets/eco-logo.png';
-import hamburger from '../assets/hamburger.png';
-import search from '../assets/search.png';
 
-const Navbar = () => {
+const Navbar = ({ searchToggle, setSearchToggle }) => {
 
     const [topbar, setTopbar] = useState(false);
 
@@ -46,20 +46,15 @@ const Navbar = () => {
                 </button>
             </div>
             <div className='flex items-center gap-5 sm:hidden'>
-                <button onClick={flipTopbar} className='flex justify-center items-center rounded-md h-[38px] w-[38px] border border-[#D4D4D8]'>
-                    <img 
-                        src={hamburger}
-                        alt='hamburger-icon'
-                    />
+                <button onClick={flipTopbar} className='flex justify-center items-center rounded-md h-[38px] w-[38px] border border-[#D4D4D8] focus:outline-none hover:bg-[#6E8C03] hover:text-white hover:border-none transition ease-in-out delay-100'>
+                    <i><GiHamburgerMenu size={17} /></i>
                 </button>
-                <button className='flex justify-center items-center rounded-md h-[38px] w-[38px] border border-[#D4D4D8]'>
-                    <img 
-                        src={search}
-                        alt='search-icon'
-                    />
+                <button className='flex justify-center items-center rounded-md h-[38px] w-[38px] border border-[#D4D4D8] focus:outline-none hover:bg-[#6E8C03] hover:text-white hover:border-none transition ease-in-out delay-100' onClick={()=>setSearchToggle(!searchToggle)}>
+                    <i><CiSearch size={20} /></i>
                 </button>
             </div>
         </nav>
+
         {/* Topbar */}
         <aside className='flex mt-4 sm:hidden'>
             <ul className='ml-2 flex flex-col gap-1 text-sm'>
