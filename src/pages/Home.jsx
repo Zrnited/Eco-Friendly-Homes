@@ -12,6 +12,7 @@ import herosectionFrame2 from '../assets/herosection-frame-2.png';
 import location from '../assets/location.png';
 import dollarCircle from '../assets/dollar-circle.png';
 import house from '../assets/house.png';
+import checkbox from '../assets/checkbox.png';
 import serv1 from '../assets/serv6.png';
 import serv2 from '../assets/serv7.png';
 import serv3 from '../assets/serv8.png';
@@ -25,7 +26,11 @@ import house5 from '../assets/house5.png';
 import house6 from '../assets/house6.png';
 import bedIcon from '../assets/bed-icon.png';
 import bathIcon from '../assets/bath-icon.png';
+import ecoHomeIcon from '../assets/eco-home.png';
+import smaryCityIcon from '../assets/smart-city.png';
+import solarhouse from '../assets/solarhouse.png';
 import areaIcon from '../assets/area-icon.png';
+import blogpost1 from '../assets/blogpost1.png';
 import { Link } from 'react-router-dom';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
@@ -390,7 +395,7 @@ const Home = () => {
   }, [])
 
   useEffect(()=>{
-    const slideInterval = setInterval(nextProp, 2500);
+    const slideInterval = setInterval(nextProp, 3500);
     return () => clearInterval(slideInterval);
   })
 
@@ -730,6 +735,137 @@ const Home = () => {
               <Link to={'/'} className='mt-3 w-[180px] text-white font-medium py-3.5 bg-[#6E8C03] rounded-lg text-center hover:opacity-90 transition duration-100 focus:outline-none  '>
                 See our listings
               </Link>
+            </section>
+
+            <section className='bg-white py-10 lg:py-20 md:px-10'>
+                <div className='md:flex md:flex-row md:gap-3 md:items-start md:justify-around lg:gap-20 lg:justify-center'>
+                  <div data-aos="fade-up" data-aos-duration='400' data-aos-easing='ease-in-out' className='relative flex flex-col justify-center items-center mb-10 md:h-[360px] md:mb-0 md:max-w-[450px] md:w-1/2 lg:h-auto'>
+                    <img 
+                      src={solarhouse}
+                      alt='solar-icon'
+                      className='w-[85%] md:w-full'
+                    />
+                    <div className='bg-white absolute top-2 right-4 shadow-md px-4 py-4 rounded-2xl w-[230px] flex justify-center items-center gap-3 md:top-4 md:-right-3'>
+                      <div className='w-[48px] h-[48px] rounded-full bg-[#FEEBE7] flex justify-center items-center'>
+                        <img 
+                          src={ecoHomeIcon}
+                          alt='eco-home-icon'
+                          className='w-[24px]'
+                        />
+                      </div>
+                      <p className='text-[10px] font-semibold w-[144px]'>Solar panels, wind turbines and geothermal energy to power the home</p>
+                    </div>
+                    <div className='bg-white absolute -bottom-12 right-2.5 shadow-md px-4 py-4 rounded-2xl w-[230px] flex justify-center items-center gap-3 md:-right-5'>
+                      <div className='w-[48px] h-[48px] rounded-full bg-[#FEEBE7] flex justify-center items-center'>
+                        <img 
+                          src={smaryCityIcon}
+                          alt='eco-home-icon'
+                          className='w-[24px]'
+                        />
+                      </div>
+                      <p className='text-[10px] font-semibold w-[144px]'>Use of natural light, ventilation, and water efficiency</p>
+                    </div>
+                  </div>
+                  
+                  {/* Company's values */}
+                  <div data-aos='fade-up' data-aos-duration='800' data-aos-easing='ease-in-quad' className='py-14 flex flex-col items-center justify-center px-5 md:w-1/2 md:items-start md:justify-start md:py-1 md:max-w-[510px] xl:max-w-[530px]'>
+                    <div className='flex gap-2 flex-col justify-center items-center md:items-start'>
+                      <p className='px-3 w-auto py-1 bg-[#FEEBE7] text-[#F2380F] uppercase font-medium rounded-md'>our values</p>
+                      <h1 className='font-semibold text-2xl capitalize w-[70%] text-center md:text-left md:w-[80%] xl:text-3xl'>Benefits of owning an eco-friendly home</h1>
+                    </div>
+                    <p className='text-gray-500 text-sm w-[90%] text-center my-4 md:text-left xl:w-full'>
+                      Sustainable living is a way of life that aims to reduce the negative impact that our daily activities have on the environment, and one of the ways to achieve this is by living in eco-friendly homes. 
+                    </p>
+                    <div className='w-full flex flex-col items-start justify-start gap-4 font-medium text-[14px]'>
+                      <div className='flex flex-row gap-5 items-center'>
+                        <img 
+                          src={checkbox}
+                          alt='checkbox-icon'
+                          className='w-[22px] h-[20px]'
+                        />
+                        <p>Reduced energy bills</p>
+                      </div>
+                      <div className='flex flex-row gap-5 items-center'>
+                        <img 
+                          src={checkbox}
+                          alt='checkbox-icon'
+                          className='w-[22px] h-[20px]'
+                        />
+                        <p>Low levels of volatile organic compounds</p>
+                      </div>
+                      <div className='flex flex-row gap-5 items-center'>
+                        <img 
+                          src={checkbox}
+                          alt='checkbox-icon'
+                          className='w-[22px] h-[20px]'
+                        />
+                        <p>Reduced overall carbon footprint</p>
+                      </div>
+                      <div className='flex flex-row gap-5 items-center'>
+                        <img 
+                          src={checkbox}
+                          alt='checkbox-icon'
+                          className='w-[22px] h-[20px]'
+                        />
+                        <p>Decreased emission of greenhouse gases</p>
+                      </div>
+                    </div>
+                    <button className='mt-10 flex gap-3 items-center bg-[#6E8C03] text-white px-5 h-[46px] rounded-md md:mt-5'>
+                      <p>More informations</p>
+                      <i><BsChevronRight /></i>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Blog posts */}
+                <div>
+                  <div className='flex gap-2 flex-col justify-center items-center md:items-start'>
+                    <p className='px-3 w-auto py-1 bg-[#FEEBE7] text-[#F2380F] uppercase font-medium rounded-md'>blog posts</p>
+                    <h1 className='font-semibold text-2xl capitalize w-[70%] text-center md:text-left md:w-[80%] xl:text-3xl'>latest news feeds on eco-friendly homes</h1>
+                  </div>
+
+                  <div className='flex flex-col gap-5 my-10 px-3'>
+                    <div className='h-auto flex gap-3'>
+                      <img 
+                        src={blogpost1}
+                        alt='blogpost-icon'
+                        className='max-h-[130px]'
+                      />
+                      <div className='flex flex-col gap-0.5 w-full'>
+                        <div className='flex flex-row gap-1 text-sm text-gray-500'>
+                          <p>February 16, 2023</p>
+                          <RxDotFilled size={20} />
+                          <p>Eleanor Pena</p>
+                        </div>
+                        <h1 className='font-semibold'>Practical Architectural Design Solutions for Sustainable Buildings</h1>
+                        <p className='text-sm text-gray-500'>
+                          Incorporating sustainability in architectural designs has become a popular topic within the AEC
+                          <Link to={'/'} className='text-[#F2380F]'> Read more...</Link>
+                        </p>
+                      </div>
+                    </div>
+                    <div className='h-auto flex gap-3'>
+                      <img 
+                        src={blogpost1}
+                        alt='blogpost-icon'
+                        className='max-h-[130px]'
+                      />
+                      <div className='flex flex-col gap-0.5 w-full'>
+                        <div className='flex flex-row gap-1 text-sm text-gray-500'>
+                          <p>February 16, 2023</p>
+                          <RxDotFilled size={20} />
+                          <p>Eleanor Pena</p>
+                        </div>
+                        <h1 className='font-semibold'>Practical Architectural Design Solutions for Sustainable Buildings</h1>
+                        <p className='text-sm text-gray-500'>
+                          Incorporating sustainability in architectural designs has become a popular topic within the AEC
+                          <Link to={'/'} className='text-[#F2380F]'> Read more...</Link>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
             </section>
           </Layout>
         )}
