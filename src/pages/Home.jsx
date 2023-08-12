@@ -1,36 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import homepageImages from '../components/Assets';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Loader from '../components/Loader';
 import Layout from '../components/Layout';
-import herosectionCircle1 from '../assets/herosection-circle-1.png';
-import herosectionCircle2 from '../assets/herosection-circle-2.png';
-import serviceCircle1 from '../assets/service-circle-1.png';
-import serviceCircle2 from '../assets/service-circle-2.png';
-import herosectionFrame from '../assets/herosection-frame.png';
-import herosectionFrame2 from '../assets/herosection-frame-2.png';
-import location from '../assets/location.png';
-import dollarCircle from '../assets/dollar-circle.png';
-import house from '../assets/house.png';
-import checkbox from '../assets/checkbox.png';
-import serv1 from '../assets/serv6.png';
-import serv2 from '../assets/serv7.png';
-import serv3 from '../assets/serv8.png';
-import serv4 from '../assets/serv9.png';
-import serv5 from '../assets/serv10.png';
-import house1 from '../assets/house1.png';
-import house2 from '../assets/house2.png';
-import house3 from '../assets/house3.png';
-import house4 from '../assets/house4.png';
-import house5 from '../assets/house5.png';
-import house6 from '../assets/house6.png';
-import bedIcon from '../assets/bed-icon.png';
-import bathIcon from '../assets/bath-icon.png';
-import ecoHomeIcon from '../assets/eco-home.png';
-import smaryCityIcon from '../assets/smart-city.png';
-import solarhouse from '../assets/solarhouse.png';
-import areaIcon from '../assets/area-icon.png';
-import blogpost1 from '../assets/blogpost1.png';
 import { Link } from 'react-router-dom';
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
@@ -64,27 +37,27 @@ const Home = () => {
 
   const companyOffers = [
     {
-      image: serv1,
+      image: homepageImages.serv1,
       title: 'Stylish Environment',
       desc: 'We believe in creating a sustainable future and want to help our clients live in homes that are not only good for the environment but also comfortable'
     },
     {
-      image: serv2,
+      image: homepageImages.serv2,
       title: 'Clients Consultancy',
       desc: 'We offer consultations to help clients understand what eco-friendly features to look for (tiny houses to large family homes and  how to maintain them'
     },
     {
-      image: serv3,
+      image: homepageImages.serv3,
       title: 'Eco - Friendly',
       desc: 'We work with builders and architects who share our vision; featuring homes that meet eco-friendly standards such as solar panels, rainwater harvesting, e.t.c'
     },
     {
-      image: serv4,
+      image: homepageImages.serv4,
       title: 'Customer Relations',
       desc: 'We cater to environmentally conscious individuals and families who want to reduce their carbon footprint while still enjoying the convenience of living.'
     },
     {
-      image: serv5,
+      image: homepageImages.serv5,
       title: 'Middle Man Service',
       desc: 'We also work with clients who want to build a custom eco-friendly home, connecting them with architects and builders who specialize in green building.'
     },
@@ -92,7 +65,7 @@ const Home = () => {
 
   const companyProperties = [
     {
-      img: house1,
+      img: homepageImages.house1,
       name: 'Philadelphia Castle',
       location: 'Ikeja, Lagos',
       price: '$47,000',
@@ -104,7 +77,7 @@ const Home = () => {
       other: '...'
     },
     {
-      img: house2,
+      img: homepageImages.house2,
       name: 'Camp Nou',
       location: 'Ajah, Lagos',
       price: '$42,000',
@@ -116,7 +89,7 @@ const Home = () => {
       other: '...'
     },
     {
-      img: house3,
+      img: homepageImages.house3,
       name: "McDonald's Arena",
       location: 'VGC, Lagos',
       price: '$65,000',
@@ -247,7 +220,7 @@ const Home = () => {
       id: 0,
       data: [
         {
-          img: house4,
+          img: homepageImages.house4,
           name: 'Philadelphia Castle',
           location: 'Ikeja, Lagos',
           price: '$47,000',
@@ -259,7 +232,7 @@ const Home = () => {
           other: '...'
         },
         {
-          img: house5,
+          img: homepageImages.house5,
           name: 'Camp Nou',
           location: 'Ajah, Lagos',
           price: '$42,000',
@@ -271,7 +244,7 @@ const Home = () => {
           other: '...'
         },
         {
-          img: house6,
+          img: homepageImages.house6,
           name: "McDonald's Arena",
           location: 'VGC, Lagos',
           price: '$65,000',
@@ -288,7 +261,7 @@ const Home = () => {
       id: 1,
       data: [
         {
-          img: house5,
+          img: homepageImages.house5,
           name: 'New Castle',
           location: 'Somolu, Lagos',
           price: '$88,000',
@@ -300,7 +273,7 @@ const Home = () => {
           other: '...'
         },
         {
-          img: house6,
+          img: homepageImages.house6,
           name: 'Old Traford',
           location: 'Allen Avenue, Lagos',
           price: '$52,000',
@@ -312,7 +285,7 @@ const Home = () => {
           other: '...'
         },
         {
-          img: house4,
+          img: homepageImages.house4,
           name: "Eagle's Square",
           location: 'Surulere, Lagos',
           price: '$65,000',
@@ -329,7 +302,7 @@ const Home = () => {
       id: 2,
       data: [
         {
-          img: house6,
+          img: homepageImages.house6,
           name: 'Obas palace',
           location: 'Agege, Lagos',
           price: '$38,000',
@@ -341,7 +314,7 @@ const Home = () => {
           other: '...'
         },
         {
-          img: house4,
+          img: homepageImages.house4,
           name: 'Kings Court',
           location: 'Yaba, Lagos',
           price: '$32,000',
@@ -353,7 +326,7 @@ const Home = () => {
           other: '...'
         },
         {
-          img: house5,
+          img: homepageImages.house5,
           name: "Peckerwood",
           location: 'Iyana-Ipaja, Lagos',
           price: '$25,000',
@@ -368,11 +341,38 @@ const Home = () => {
     }
   ]
 
+  const blogPosts = [
+    {
+      image: homepageImages.blogpost1,
+      date: 'February 16, 2023',
+      author: 'Eleanor Pena',
+      title: 'Practical Architentural Design Solutions for Sustainable Buildings',
+      body: 'Incorporating sustainability in architectural designs has become a popular topic within the AEC'
+    },
+    {
+      image: homepageImages.blogpost2,
+      date: 'February 16, 2023',
+      author: 'Theresa Webb',
+      title: 'How to make your home more energy efficient',
+      body: 'Recently, the government has been criticized for failing to provide enough energy-saving advice for house'
+    },
+    {
+      image: homepageImages.blogpost3,
+      date: 'February 15, 2023',
+      author: 'Darrell Steward',
+      title: 'Top 10 Eco-Friendly Design Choices for your home',
+      body: 'Whether building new construction or retrofitting an existing residence, implementing sustainable elements has'
+    },
+    {
+      image: homepageImages.blogpost4,
+      date: 'February 14, 2023',
+      author: 'Ronald Richards',
+      title: '6 Details That Should Be Included in a Sustainable Home Design',
+      body: 'The construction industry is one of the most significant contributors to the UK’s carbon footprint. According'
+    }
+  ]
+
   const prevProp = () => {
-    // let firstProp = ''
-    // if(currentIndex === 0){
-    //   firstProp === currentIndex
-    // }
     const firstPropSet = currentIndex === 0;
     const newIndex = firstPropSet ? moreCompaniesProp?.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
@@ -414,12 +414,12 @@ const Home = () => {
             {/* all infos */}
             <section className='h-[736px] bg-[#262626] relative text-white px-5 pt-20 overflow-hidden flex flex-col sm:h-auto sm:pb-10 sm:flex-row md:pt-28 lg:justify-center'>
               <img 
-                src={herosectionCircle1}
+                src={homepageImages.herosectionCircle1}
                 alt='broken-circle'
                 className='absolute -right-3 top-48 md:hidden'
               />
               <img 
-                src={herosectionCircle2}
+                src={homepageImages.herosectionCircle2}
                 alt='broken-circle'
                 className='hidden absolute -right-3 top-20 md:flex'
               />
@@ -433,26 +433,26 @@ const Home = () => {
 
               <div className='z-10 flex justify-center items-center sm:w-1/2 lg:w-[540px]'>
                 <img 
-                  src={herosectionFrame}
+                  src={homepageImages.herosectionFrame}
                   alt='frame-img'
                   className='sm:w-full md:hidden'
                 />
                 <img 
-                  src={herosectionFrame2}
+                  src={homepageImages.herosectionFrame2}
                   alt='frame-img'
                   className='hidden md:flex md:w-full'
                 />
               </div>
             </section>
 
-            <section className='flex flex-col items-center py-10 px-5 relative'>
+            <section className='flex flex-col items-center py-10 px-3 relative sm:px-5'>
               <img 
-                src={serviceCircle2}
+                src={homepageImages.serviceCircle2}
                 alt='icon'
                 className='absolute left-0 -z-10 lg:hidden'
               />
               <img 
-                src={serviceCircle1}
+                src={homepageImages.serviceCircle1}
                 alt='icon'
                 className='hidden absolute left-0 -z-10 lg:flex'
               />
@@ -467,7 +467,7 @@ const Home = () => {
                         <label className='w-[40px] border border-slate-300 h-full rounded-l-lg flex justify-center items-center'>
                             <div className='h-[30px] flex justify-center items-center w-[30px] bg-[#FEEBE7] rounded-full'>
                                 <img 
-                                    src={location}
+                                    src={homepageImages.location}
                                     alt='location-icon'
                                     className='w-[17px]'
                                 />
@@ -485,7 +485,7 @@ const Home = () => {
                         <label className='w-[40px] border border-slate-300 h-full rounded-l-lg flex justify-center items-center'>
                             <div className='h-[30px] flex justify-center items-center w-[30px] bg-[#FEEBE7] rounded-full'>
                                 <img 
-                                    src={house}
+                                    src={homepageImages.house}
                                     alt='location-icon'
                                     className='w-[17px]'
                                 />
@@ -503,7 +503,7 @@ const Home = () => {
                         <label className='w-[40px] border border-slate-300 h-full rounded-l-lg flex justify-center items-center'>
                             <div className='h-[30px] flex justify-center items-center w-[30px] bg-[#FEEBE7] rounded-full'>
                                 <img 
-                                    src={dollarCircle}
+                                    src={homepageImages.dollarCircle}
                                     alt='location-icon'
                                     className='w-[17px]'
                                 />
@@ -585,7 +585,7 @@ const Home = () => {
                 {
                   companyProperties?.map((ppt)=>{
                     return (
-                      <div className='flex flex-col gap-2 bg-white rounded-md drop-shadow-md'data-aos='zoom-in' data-aos-duration='800' data-aos-easing='ease-in-quad'>
+                      <div className='flex flex-col gap-2 bg-white rounded-md drop-shadow-md'data-aos='fade-in' data-aos-duration='800' data-aos-easing='ease-in-quad'>
                         <img 
                           src={ppt.img}
                           alt='prop-img'
@@ -594,7 +594,7 @@ const Home = () => {
                           <h1 className='font-semibold text-[17px]'>{ppt.name}</h1>
                           <div className='flex flex-row gap-1'>
                             <img 
-                              src={location}
+                              src={homepageImages.location}
                               className='w-[18px] h-[18px]'
                             />
                             <p className='text-sm text-gray-500'>{ppt.location}</p>
@@ -603,7 +603,7 @@ const Home = () => {
                             <div className='flex flex-row gap-3 items-center'>
                               <div className='w-[26px] h-[26px] bg-[#FEEBE7] rounded-full flex justify-center items-center'>
                                 <img 
-                                  src={bedIcon}
+                                  src={homepageImages.bedIcon}
                                   alt='bed-icon'
                                 />
                               </div>
@@ -612,7 +612,7 @@ const Home = () => {
                             <div className='flex flex-row gap-3 items-center'>
                               <div className='w-[26px] h-[26px] bg-[#FEEBE7] rounded-full flex justify-center items-center'>
                                 <img 
-                                  src={bathIcon}
+                                  src={homepageImages.bathIcon}
                                   alt='bed-icon'
                                 />
                               </div>
@@ -621,7 +621,7 @@ const Home = () => {
                             <div className='flex flex-row gap-3 items-center'>
                               <div className='w-[26px] h-[26px] bg-[#FEEBE7] rounded-full flex justify-center items-center'>
                                 <img 
-                                  src={areaIcon}
+                                  src={homepageImages.areaIcon}
                                   alt='bed-icon'
                                 />
                               </div>
@@ -658,8 +658,6 @@ const Home = () => {
                 {
                   moreCompaniesProp[currentIndex].data?.map((prop, propkey)=>{
                     return (
-                      // <div key={propkey} className='w-auto flex transition-transform ease-out duration-500 lg:max-w-[330px]' style={{transform: `translateX(-${currentIndex * 1}%)`}}>
-                      // </div>
                         <div data-aos='zoom-in' data-aos-duration='800' data-aos-easing='ease-in-quad' key={propkey} className='flex flex-col gap-2 bg-white rounded-md drop-shadow-md w-auto transition-transform ease-out duration-500 lg:max-w-[330px]' style={{transform: `translateX(-${currentIndex * 0}%)`}}>
                           <img 
                             src={prop.img}
@@ -669,7 +667,7 @@ const Home = () => {
                             <h1 className='font-semibold text-[17px]'>{prop.name}</h1>
                             <div className='flex flex-row gap-1'>
                               <img 
-                                src={location}
+                                src={homepageImages.location}
                                 className='w-[18px] h-[18px]'
                               />
                               <p className='text-sm text-gray-500'>{prop.location}</p>
@@ -678,7 +676,7 @@ const Home = () => {
                               <div className='flex flex-row gap-3 items-center'>
                                 <div className='w-[26px] h-[26px] bg-[#FEEBE7] rounded-full flex justify-center items-center'>
                                   <img 
-                                    src={bedIcon}
+                                    src={homepageImages.bedIcon}
                                     alt='bed-icon'
                                   />
                                 </div>
@@ -687,7 +685,7 @@ const Home = () => {
                               <div className='flex flex-row gap-3 items-center'>
                                 <div className='w-[26px] h-[26px] bg-[#FEEBE7] rounded-full flex justify-center items-center'>
                                   <img 
-                                    src={bathIcon}
+                                    src={homepageImages.bathIcon}
                                     alt='bed-icon'
                                   />
                                 </div>
@@ -696,7 +694,7 @@ const Home = () => {
                               <div className='flex flex-row gap-3 items-center'>
                                 <div className='w-[26px] h-[26px] bg-[#FEEBE7] rounded-full flex justify-center items-center'>
                                   <img 
-                                    src={areaIcon}
+                                    src={homepageImages.areaIcon}
                                     alt='bed-icon'
                                   />
                                 </div>
@@ -741,14 +739,14 @@ const Home = () => {
                 <div className='md:flex md:flex-row md:gap-3 md:items-start md:justify-around lg:gap-20 lg:justify-center'>
                   <div data-aos="fade-up" data-aos-duration='400' data-aos-easing='ease-in-out' className='relative flex flex-col justify-center items-center mb-10 md:h-[360px] md:mb-0 md:max-w-[450px] md:w-1/2 lg:h-auto'>
                     <img 
-                      src={solarhouse}
+                      src={homepageImages.solarhouse}
                       alt='solar-icon'
                       className='w-[85%] md:w-full'
                     />
                     <div className='bg-white absolute top-2 right-4 shadow-md px-4 py-4 rounded-2xl w-[230px] flex justify-center items-center gap-3 md:top-4 md:-right-3'>
                       <div className='w-[48px] h-[48px] rounded-full bg-[#FEEBE7] flex justify-center items-center'>
                         <img 
-                          src={ecoHomeIcon}
+                          src={homepageImages.ecoHomeIcon}
                           alt='eco-home-icon'
                           className='w-[24px]'
                         />
@@ -758,7 +756,7 @@ const Home = () => {
                     <div className='bg-white absolute -bottom-12 right-2.5 shadow-md px-4 py-4 rounded-2xl w-[230px] flex justify-center items-center gap-3 md:-right-5'>
                       <div className='w-[48px] h-[48px] rounded-full bg-[#FEEBE7] flex justify-center items-center'>
                         <img 
-                          src={smaryCityIcon}
+                          src={homepageImages.smaryCityIcon}
                           alt='eco-home-icon'
                           className='w-[24px]'
                         />
@@ -779,7 +777,7 @@ const Home = () => {
                     <div className='w-full flex flex-col items-start justify-start gap-4 font-medium text-[14px]'>
                       <div className='flex flex-row gap-5 items-center'>
                         <img 
-                          src={checkbox}
+                          src={homepageImages.checkbox}
                           alt='checkbox-icon'
                           className='w-[22px] h-[20px]'
                         />
@@ -787,7 +785,7 @@ const Home = () => {
                       </div>
                       <div className='flex flex-row gap-5 items-center'>
                         <img 
-                          src={checkbox}
+                          src={homepageImages.checkbox}
                           alt='checkbox-icon'
                           className='w-[22px] h-[20px]'
                         />
@@ -795,7 +793,7 @@ const Home = () => {
                       </div>
                       <div className='flex flex-row gap-5 items-center'>
                         <img 
-                          src={checkbox}
+                          src={homepageImages.checkbox}
                           alt='checkbox-icon'
                           className='w-[22px] h-[20px]'
                         />
@@ -803,7 +801,7 @@ const Home = () => {
                       </div>
                       <div className='flex flex-row gap-5 items-center'>
                         <img 
-                          src={checkbox}
+                          src={homepageImages.checkbox}
                           alt='checkbox-icon'
                           className='w-[22px] h-[20px]'
                         />
@@ -818,54 +816,45 @@ const Home = () => {
                 </div>
 
                 {/* Blog posts */}
-                <div>
-                  <div className='flex gap-2 flex-col justify-center items-center md:items-start'>
+                <div className='flex flex-col md:items-center md:py-28'>
+                  <div className='flex gap-2 flex-col justify-center items-center md:items-center'>
                     <p className='px-3 w-auto py-1 bg-[#FEEBE7] text-[#F2380F] uppercase font-medium rounded-md'>blog posts</p>
-                    <h1 className='font-semibold text-2xl capitalize w-[70%] text-center md:text-left md:w-[80%] xl:text-3xl'>latest news feeds on eco-friendly homes</h1>
+                    <h1 className='font-semibold text-2xl capitalize w-[70%] text-center md:w-[85%] xl:text-3xl'>latest news feeds on eco-friendly homes</h1>
                   </div>
 
-                  <div className='flex flex-col gap-5 my-10 px-3'>
-                    <div className='h-auto flex gap-3'>
-                      <img 
-                        src={blogpost1}
-                        alt='blogpost-icon'
-                        className='max-h-[130px]'
-                      />
-                      <div className='flex flex-col gap-0.5 w-full'>
-                        <div className='flex flex-row gap-1 text-sm text-gray-500'>
-                          <p>February 16, 2023</p>
-                          <RxDotFilled size={20} />
-                          <p>Eleanor Pena</p>
+                  <div className='flex flex-col gap-5 my-10 px-3 md:grid md:grid-cols-2 md:align-top  md:gap-8 lg:max-w-[95%]'>
+                    {
+                      blogPosts?.map((post, index)=>{
+                        return (
+                        <div key={index} className='h-auto flex gap-3' data-aos='fade-in' data-aos-duration='800' data-aos-easing='ease-in-quad'>
+                          <img 
+                            src={post.image}
+                            alt='blogpost-icon'
+                            className='max-h-[130px] lg:max-h-[150px]'
+                          />
+                          <div className='flex flex-col gap-0.5 w-full'>
+                            <div className='flex flex-row gap-1 text-sm text-gray-500 xl:text-base'>
+                              <p>{post.date}</p>
+                              <RxDotFilled size={20} />
+                              <p>{post.author}</p>
+                            </div>
+                            <h1 className='font-semibold lg:text-lg'>{post.title}</h1>
+                            <p className='text-sm text-gray-500 xl:text-base'>
+                             {post.body.length > 10 ? `${post.body.slice(0, 80)}...` : post.body}
+                              <Link to={'/'} className='text-[#F2380F]'> Read more..</Link>
+                            </p>
+                          </div>
                         </div>
-                        <h1 className='font-semibold'>Practical Architectural Design Solutions for Sustainable Buildings</h1>
-                        <p className='text-sm text-gray-500'>
-                          Incorporating sustainability in architectural designs has become a popular topic within the AEC
-                          <Link to={'/'} className='text-[#F2380F]'> Read more...</Link>
-                        </p>
-                      </div>
-                    </div>
-                    <div className='h-auto flex gap-3'>
-                      <img 
-                        src={blogpost1}
-                        alt='blogpost-icon'
-                        className='max-h-[130px]'
-                      />
-                      <div className='flex flex-col gap-0.5 w-full'>
-                        <div className='flex flex-row gap-1 text-sm text-gray-500'>
-                          <p>February 16, 2023</p>
-                          <RxDotFilled size={20} />
-                          <p>Eleanor Pena</p>
-                        </div>
-                        <h1 className='font-semibold'>Practical Architectural Design Solutions for Sustainable Buildings</h1>
-                        <p className='text-sm text-gray-500'>
-                          Incorporating sustainability in architectural designs has become a popular topic within the AEC
-                          <Link to={'/'} className='text-[#F2380F]'> Read more...</Link>
-                        </p>
-                      </div>
-                    </div>
+                        )
+                      })
+                    }
                   </div>
+
+                  <Link to={'/properties'} className='bg-[#6E8C03] flex gap-3 items-center justify-center rounded-lg py-3 text-white w-[150px] place-content-center self-center'>
+                    See more
+                    <BsChevronRight />
+                  </Link>
                 </div>
-                
             </section>
           </Layout>
         )}
