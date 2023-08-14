@@ -30,9 +30,16 @@ import ecoHomeIcon from '../assets/eco-home.png';
 import smaryCityIcon from '../assets/smart-city.png';
 import solarhouse from '../assets/solarhouse.png';
 import areaIcon from '../assets/area-icon.png';
+import theresa from '../assets/Theresa.png';
+import bessie from '../assets/Bessie.png';
+import darlene from '../assets/Darlene.png';
+import albert from '../assets/Albert.png';
+import faqDesktop from '../assets/faq-desktop.png';
+import faqMobile from '../assets/faq-mobile.png';
+import quotes from '../assets/quotes.png';
 
 const homepageImages = {
-    herosectionCircle1, herosectionCircle2, serviceCircle1, serviceCircle2, herosectionFrame, herosectionFrame2, location, dollarCircle, house, checkbox, serv1, serv2, serv3, serv4, serv5, house1, house2, house3, house4, house5, house6, blogpost2, blogpost1, blogpost3, blogpost4, bedIcon, bathIcon, ecoHomeIcon, smaryCityIcon, solarhouse, areaIcon,
+    herosectionCircle1, herosectionCircle2, serviceCircle1, serviceCircle2, herosectionFrame, herosectionFrame2, location, dollarCircle, house, checkbox, serv1, serv2, serv3, serv4, serv5, house1, house2, house3, house4, house5, house6, blogpost2, blogpost1, blogpost3, blogpost4, bedIcon, bathIcon, ecoHomeIcon, smaryCityIcon, solarhouse, areaIcon, theresa, bessie, darlene, albert, faqDesktop, faqMobile, quotes
 }
 
 export default homepageImages

@@ -13,6 +13,8 @@ const Home = () => {
 
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [testimonyIndex, setTestimonyIndex] = useState(1);
+  // console.log(testimonyIndex);
 
   const companyMetrics = [
     {
@@ -372,6 +374,35 @@ const Home = () => {
     }
   ]
 
+  const testimonials = [
+    {
+      author: 'Bessie Cooper',
+      title: 'Nursing Assistant',
+      message: 'I was blown away by the eco-friendly homes offered by this agency. The attention to detail and sustainable features were truly impressive, and I feel good knowing that my home is helping the environment.',
+      avatar: homepageImages.bessie
+    },
+    {
+      author: 'Theresa Webb',
+      title: 'Dog Trainer',
+      message: "I was hesitant about eco-friendly homes at first, but the agents at this agency were so knowledgeable and helpful in answering all of my questions. I ultimately decided to purchase an eco-friendly home, and I couldn't be happier with my decision.",
+      avatar: homepageImages.theresa
+    },
+    {
+      author: 'Darlene Robertson',
+      title: 'Medical Assistant',
+      message: "I've been living in an eco-friendly home from this agency for over a year now, and I've noticed a significant decrease in my energy bills. The sustainable features really work, and I feel good knowing that I'm doing my part to help the planet while also saving money.",
+      avatar: homepageImages.darlene
+    },
+    {
+      author: 'Albert Flores',
+      title: 'Web Developer',
+      message: "The team at this agency really goes above and beyond to ensure that their properties are truly eco-friendly. I was impressed by their commitment to sustainability and the environment.",
+      avatar: homepageImages.albert
+    },
+  ]
+
+  // console.log(testimonials.length)
+
   const prevProp = () => {
     const firstPropSet = currentIndex === 0;
     const newIndex = firstPropSet ? moreCompaniesProp?.length - 1 : currentIndex - 1;
@@ -382,6 +413,18 @@ const Home = () => {
     const lastPropSet = currentIndex === moreCompaniesProp?.length - 1;
     const newIndex = lastPropSet ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+  }
+
+  const prevTestimony = () => {
+    const firstTest = testimonyIndex === 0;
+    const newIndex = firstTest ? testimonials?.length - 1 : testimonyIndex - 1;
+    setTestimonyIndex(newIndex);
+  }
+
+  const nextTestimony = () => {
+    const lastTest = testimonyIndex === testimonials?.length - 1;
+    const newIndex = lastTest ? 0 : testimonyIndex + 1;
+    setTestimonyIndex(newIndex);
   }
 
   const goToSlide = (slideIndex) =>{
@@ -396,7 +439,8 @@ const Home = () => {
 
   useEffect(()=>{
     const slideInterval = setInterval(nextProp, 3500);
-    return () => clearInterval(slideInterval);
+    const slideTestInterval = setInterval(nextTestimony, 3500);
+    return () => clearInterval(slideInterval, slideTestInterval);
   })
 
   useEffect(()=>{
@@ -854,6 +898,66 @@ const Home = () => {
                     See more
                     <BsChevronRight />
                   </Link>
+                </div>
+
+                {/* Testimonials for desktop */}
+                <div className='mt-20 px-5 sm:hidden'>
+                  <div className='flex gap-2 flex-col justify-center items-center md:items-center'>
+                    <p className='px-3 w-auto py-1 bg-[#FEEBE7] text-[#F2380F] uppercase font-semibold rounded-md'>testimonials</p>
+                    <h1 className='font-semibold text-2xl capitalize w-[70%] text-center md:w-[85%] xl:text-3xl'>What our clients say about us</h1>
+                  </div>
+                  <div className='w-full flex justify-end my-5 gap-5 sm:flex lg:mt-0'>
+                    <button onClick={prevTestimony} className='p-2 rounded-[5px] bg-[#6E8C03] text-white focus:outline-none'>
+                      <BsChevronLeft />
+                    </button>
+                    <button onClick={nextTestimony} className='p-2 rounded-[5px] bg-[#6E8C03] text-white focus:outline-none'>
+                      <BsChevronRight />
+                    </button>
+                  </div>
+                  <div className='flex flex-col justify-center items-center gap-4 overflow-hidden carousel-container'>
+                    <div className='overflow-hidden h-[260px] w-[320px] flex flex-row'>
+                      {
+                        testimonials?.map((testimony, index)=>{
+                          return (
+                            <div key={index} className='p-4 flex flex-col gap-5 relative min-w-[320px] h-auto border-[0.5px] border-gray-300 rounded-2xl transition-transform ease-out duration-500' style={{transform: `translateX(-${testimonyIndex * 100}%)`}}>
+                              <img 
+                                src={homepageImages.quotes}
+                                alt='quotes-icon'
+                                className='absolute top-3 left-3'
+                              />
+                              <p className='text-[14px] text-gray-500 text-justify z-10 mt-2'>{testimony.message}</p>
+                              <div className='flex flex-col gap-2'>
+                                <hr className='border-0.5 border-gray-300' />
+                                <div className='flex items-center gap-2'>
+                                  <img 
+                                    src={testimony.avatar}
+                                    alt='author-icon'
+                                  />
+                                  <div className='flex flex-col'>
+                                    <h1 className='font-semibold'>{testimony.author}</h1>
+                                    <small className='text-[#6E6E6E]'>{testimony.title}</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
+                    <div className='flex flex-row items-center'>
+                      {
+                        testimonials?.map((dot, index)=>{
+                          return (
+                            <div key={index}>
+                              {
+                                index === testimonyIndex ? <RxDotFilled size={25} color={'#6E8C03'} /> : <RxDotFilled color={'gray'} size={25} />
+                              }
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
+                  </div>
                 </div>
             </section>
           </Layout>
