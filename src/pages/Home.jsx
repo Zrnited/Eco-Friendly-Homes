@@ -439,9 +439,13 @@ const Home = () => {
 
   useEffect(()=>{
     const slideInterval = setInterval(nextProp, 3500);
-    const slideTestInterval = setInterval(nextTestimony, 3500);
-    return () => clearInterval(slideInterval, slideTestInterval);
+    return () => clearInterval(slideInterval);
   })
+
+  // useEffect(()=>{
+  //   const slideTestInterval = setInterval(nextTestimony, 3500);
+  //   return () => clearInterval(slideTestInterval);
+  // })
 
   useEffect(()=>{
     Aos.init();
@@ -900,21 +904,21 @@ const Home = () => {
                   </Link>
                 </div>
 
-                {/* Testimonials for desktop */}
-                <div className='mt-20 px-5 sm:hidden'>
+                {/* Testimonials */}
+                <div className='mt-20 px-5'>
                   <div className='flex gap-2 flex-col justify-center items-center md:items-center'>
                     <p className='px-3 w-auto py-1 bg-[#FEEBE7] text-[#F2380F] uppercase font-semibold rounded-md'>testimonials</p>
                     <h1 className='font-semibold text-2xl capitalize w-[70%] text-center md:w-[85%] xl:text-3xl'>What our clients say about us</h1>
                   </div>
                   <div className='w-full flex justify-end my-5 gap-5 sm:flex lg:mt-0'>
-                    <button onClick={prevTestimony} className='p-2 rounded-[5px] bg-[#6E8C03] text-white focus:outline-none'>
+                    <button onClick={prevTestimony} className='p-2 rounded-[5px] bg-[#6E8C03] text-white opacity-90 hover:opacity-100 transition ease-in-out delay-100 focus:outline-none'>
                       <BsChevronLeft />
                     </button>
-                    <button onClick={nextTestimony} className='p-2 rounded-[5px] bg-[#6E8C03] text-white focus:outline-none'>
+                    <button onClick={nextTestimony} className='p-2 rounded-[5px] bg-[#6E8C03] text-white opacity-90 hover:opacity-100 transition ease-in-out delay-100 focus:outline-none'>
                       <BsChevronRight />
                     </button>
                   </div>
-                  <div className='flex flex-col justify-center items-center gap-4 overflow-hidden carousel-container'>
+                  <div className='flex flex-col justify-center items-center gap-4 overflow-hidden carousel-container sm:hidden'>
                     <div className='overflow-hidden h-[260px] w-[320px] flex flex-row'>
                       {
                         testimonials?.map((testimony, index)=>{
@@ -958,7 +962,41 @@ const Home = () => {
                       }
                     </div>
                   </div>
+
+                  {/* Testimonials for bigger screen */}
+                  <div className='hidden sm:flex'>
+                    <div className='flex flex-row flex-wrap w-full gap-3'>
+                      {
+                        testimonials?.map((testimony, index)=>{
+                          return (
+                            <div key={index} className='p-3 flex flex-col gap-5 relative w-[280px] md:w-[300px] h-auto border-[0.5px] border-gray-300 rounded-2xl transition-transform ease-out duration-500' >
+                              <img 
+                                src={homepageImages.quotes}
+                                alt='quotes-icon'
+                                className='absolute top-3 left-3'
+                              />
+                              <p className='text-[14px] text-gray-500 text-justify z-10 mt-2'>{testimony.message}</p>
+                              <div className='flex flex-col gap-2'>
+                                <hr className='border-0.5 border-gray-300' />
+                                <div className='flex items-center gap-2'>
+                                  <img 
+                                    src={testimony.avatar}
+                                    alt='author-icon'
+                                  />
+                                  <div className='flex flex-col'>
+                                    <h1 className='font-semibold'>{testimony.author}</h1>
+                                    <small className='text-[#6E6E6E]'>{testimony.title}</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          )
+                        })
+                      }
+                    </div>
+                  </div>
                 </div>
+
             </section>
           </Layout>
         )}
