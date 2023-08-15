@@ -13,7 +13,7 @@ const Home = () => {
 
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonyIndex, setTestimonyIndex] = useState(1);
+  const [testimonyIndex, setTestimonyIndex] = useState(0);
   // console.log(testimonyIndex);
 
   const companyMetrics = [
